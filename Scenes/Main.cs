@@ -30,7 +30,7 @@ public partial class Main : Node2D {
 		// placeBuildingButton.Connect(Button.SignalName.Pressed, Callable.From(OnButtonPressed));
 	}
 
-    public override void _UnhandledInput(InputEvent @event) {
+	public override void _UnhandledInput(InputEvent @event) {
 
 		if (@event.IsActionPressed("left_click") && cursor.Visible) {
 
@@ -39,10 +39,10 @@ public partial class Main : Node2D {
 			// Resets the ability to place a building
 			cursor.Visible = false;
 		}
-    }
+	}
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta) {
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta) {
 
 		var gridPosition = GetMouseGridCellPosition();
 
